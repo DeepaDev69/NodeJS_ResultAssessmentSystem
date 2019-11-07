@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2", // "light1", "light2", "dark1", "dark2"
+    title:{
+        text: "Student Performance Report"
+    },
+    axisY: {
+        title: "Marks(in %)"
+    },
+    data: [{        
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerColor: "grey",
+        legendText: "Examination Type",
+        dataPoints: [      
+            { y: ({{student.ca1}}/30)*100, label: "CA1" },
+            { y: ({{student.ca2}}/30)*100,  label: "CA2" },
+            { y: ({{student.ca3}}/30)*100,  label: "CA3" },
+            { y: ({{student.mte}}/40)*100,  label: "MTE" },
+            { y: ({{student.ca1}}/30)*100,  label: "ETE" },
+
+        ]
+    }]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
