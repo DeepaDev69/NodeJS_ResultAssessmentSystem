@@ -1,0 +1,63 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/student" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{student._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{student.fullName}}">
+        <div class="text-danger">
+            {{student.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Email" value="{{student.emailError}}">
+            <div class="text-danger">
+            {{student.email}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Registration Number</label>
+            <input type="text" class="form-control" name="regno" placeholder="regno" value="{{student.regno}}">  
+        </div>
+        <div class="form-group col-md-4">
+            <label>Section</label>
+            <input type="text" class="form-control" name="section" placeholder="section" value="{{student.section}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Course Name</label>
+            <input type="text" class="form-control" name="coursename" placeholder="coursename" value="{{student.coursename}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>CA1</label>
+            <input type="text" class="form-control" name="ca1" placeholder="ca1" value="{{student.ca1}}">  
+        </div>
+        <div class="form-group col-md-4">
+            <label>CA2</label>
+            <input type="text" class="form-control" name="ca2" placeholder="ca2" value="{{student.ca2}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label>CA3</label>
+            <input type="text" class="form-control" name="ca3" placeholder="ca3" value="{{student.ca3}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Mid Term</label>
+            <input type="text" class="form-control" name="mte" placeholder="mte" value="{{student.mte}}">  
+        </div>
+        <div class="form-group col-md-4">
+            <label>End Term</label>
+            <input type="text" class="form-control" name="ete" placeholder="ete" value="{{student.ete}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Attendance(in %)</label>
+            <input type="text" class="form-control" name="attendancemarks" placeholder="attendance" value="{{student.atmarks}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/student/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
